@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de descuentos</title>
+    <title>Calculadora de Descuentos</title>
 </head>
 <body>
-    <h1>Calculadora de Descuentos</h1>
-    <script src="main.js"></script>
+    <div class="container">
+        <h1>Calculadora de Descuentos </h1>
+        <label for="">
+            <input type="number" id="precio" placeholder="Ej:1000">
+        </label>
+        <label for="">Descuentos (%):
+            <input type="number" id="descuento"placeholder="Ej: 20">
+        </label>
+        <button onclick="calcularDescuentos()">Calcular </button>
+        <p id="resultado"></p>
+    </div>
 </body>
 </html>
