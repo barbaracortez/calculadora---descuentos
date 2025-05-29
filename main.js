@@ -1,7 +1,16 @@
-let precioOriginal = parseFloat(prompt("Precio original del producto:"));
-let descuentos = parseFloat(prompt ("¿Qué porcentaje de descuento tenés?"));
+function calcularDescuento() {
+    const precio = parseFloat(document.getElementById("precio").value);
+    const descuento = parseFloat(document.getElementById("descuento").value);
+    const resultado = document.getElementById("resultado");
 
-let montoDescuento = precioOriginal * (descuento / 100);
-let precioFinal = precioOriginal - montoDescuento;
+    if(isNaN(precio)|| isNaN(descuento)) {
+        resultado.textContent = "Por favor ingresá números válidos";
+        resultado.style.color = "red";
+        return;
+    }
+    const montoDescuento = precio * (descuento / 100);
+    const precioFinal = precio - montoDescuento;
 
-alert("Precio final con descuento: $ " + precioFinal.toFixed(2));
+    resultado.textContent = `precio final con descuento: $${precioFinal.toFixed(2)}`;
+    resultado.style.color = "green"
+}
