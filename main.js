@@ -21,3 +21,24 @@ function calcularDescuento() {
     resultado.style.color = "blue"; 
 }
 
+function calcularIVA(){
+
+    const precio = parseFloat(document.getElementById("precio").value);
+    const resultado = document.getElementById("resultado");
+
+    if (isNaN(precio)) {
+        resultado.textContent = "Por favor ingresá un número valido para calcular"
+        resultado.style.color = "red";
+        return;
+    }
+
+    const iva = precio * 0.21;
+    const totalConIVA = precio + iva;
+
+    resultado.innerHTML = `
+    Precio sin IVA: $${precio.toFixed(2)}<br>
+    IVA (21%): $$iva.toFixed(2)<br>
+    <strong> Total con IVA: $${totalConIVA.toFixed(2)}</stron>`;
+
+    resultado.style.color = "green"; 
+}
