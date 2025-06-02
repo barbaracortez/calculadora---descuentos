@@ -14,3 +14,8 @@ function calcularDescuento() {
     resultado.textContent = `precio final con descuento: $${precioFinal.toFixed(2)}`;
     resultado.style.color = "green"
 }
+
+resultado.innerHTML =  `Precio original : $${precio.toFixed(2)}<br>
+Descuento: ${descuento}% </br>
+Precio final: <strong>$${precioFinal.toFixed(2)}</strong>
+ `;
