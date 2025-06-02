@@ -11,11 +11,13 @@ function calcularDescuento() {
     const montoDescuento = precio * (descuento / 100);
     const precioFinal = precio - montoDescuento;
 
-    resultado.textContent = `precio final con descuento: $${precioFinal.toFixed(2)}`;
-    resultado.style.color = "green"
+    resultado.innerHTML =  `
+    Precio original : $${precio.toFixed(2)}<br>
+    Descuento: ${descuento}% </br>
+    Monto Descontado: $${montoDescuento.toFixed(2)}<br>
+    <strong>Precio final: $${precioFinal.toFixed(2)}</strong>
+ `;
+    
+    resultado.style.color = "blue"; 
 }
 
-resultado.innerHTML =  `Precio original : $${precio.toFixed(2)}<br>
-Descuento: ${descuento}% </br>
-Precio final: <strong>$${precioFinal.toFixed(2)}</strong>
- `;
