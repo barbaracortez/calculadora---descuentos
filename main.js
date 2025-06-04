@@ -42,3 +42,19 @@ function calcularIVA(){
 
     resultado.style.color = "green"; 
 }
+
+function calcularPropina(){
+    const total = parseFloat(document.getElementById('monto').value);
+    const porcentaje = parseFloat(document.getElementById('porcentajePropina').value);
+
+    if(isNaN(total ) || isNaN(porcentaje)) {
+        alert ("Por favor, ingrese vañores válidos");
+        return;
+    }
+
+    const propina = total * (porcentaje / 100);
+    const totalConPropina = total + propina;
+
+    document.getElementById('resultadoPropina').innerText = `Propina: $${propina.toFixed(2)}, Total con Propina: $${totalConPropina.toFixed(2)}`;
+    
+}
