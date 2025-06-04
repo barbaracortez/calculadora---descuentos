@@ -37,8 +37,8 @@ function calcularIVA(){
 
     resultado.innerHTML = `
     Precio sin IVA: $${precio.toFixed(2)}<br>
-    IVA (21%): $$iva.toFixed(2)<br>
-    <strong> Total con IVA: $${totalConIVA.toFixed(2)}</stron>`;
+    IVA (21%): $${iva.toFixed(2)}<br>
+    <strong> Total con IVA: $${totalConIVA.toFixed(2)}</strong>`;
 
     resultado.style.color = "green"; 
 }
