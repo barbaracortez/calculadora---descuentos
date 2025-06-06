@@ -42,3 +42,44 @@ button:hover {
 section {
     margin-top: 30px;
 }
+
+.seccion-descuentos {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.seccion-descuentos label {
+    display:block;
+    margin-bottom: 10px;
+    color:#333;
+}
+
+.seccion-descuentos input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.seccion-descuentos button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.seccion-descuentos button:hover {
+    background-color: #218838;
+}
+
+#resultado-descuento-multiples {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
