@@ -26,17 +26,20 @@
     </div>
     <section class="seccion-descuentos">
         <h2>Descuentos múltiples</h2>
-        <label type="number" id="precio-multiple" placeholder="Ej:1000">
+    
+        <label>Precio base:
+            <input type="number" id="precio-multiple" placeholder="Ej: 1000">
         </label>
-        <label> Primer descuento % : 
-            <input type="number" id="descuento1" placeholder="Ej:20">
+        <label>Primer descuento %:
+            <input type="number" id="descuento1" placeholder="Ej: 20">
         </label>
-        <label> Segundo descuento %
+        <label>Segundo descuento %:
             <input type="number" id="descuento2" placeholder="Ej: 10">
         </label>
         <button onclick="calcularMultiplesDescuentos()">Calcular</button>
         <p id="resultado-descuento-multiple"></p>
     </section>
+    
     <script src="main.js"></script>
 </body>
 </html>

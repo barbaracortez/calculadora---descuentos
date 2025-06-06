@@ -59,30 +59,32 @@ function calcularPropina(){
     
 }
 
-function calcularMultiplesdescuentos(){
-    const precio = parseFloat(document.getElementById("precio-multiple").value);
-    const descuento1 = parseFloat(document.getElementById("descuento1").value); 
-    const descuento2 = parseFloat(document.getElementById("descuento2").value);
-    const resultado = document.getElementById("resultado-descuento-multiple");
+function calcularMultiplesDescuentos() {
+  const precio = parseFloat(document.getElementById("precio-multiple").value);
+  const descuento1 = parseFloat(document.getElementById("descuento1").value);
+  const descuento2 = parseFloat(document.getElementById("descuento2").value);
+  const resultado = document.getElementById("resultado-descuento-multiple");
 
-    if (isNAN (precio) || isNAN (descuento1) || isNaN(descuento2)) {
-        resultado.textContent = "Por favor completá todos los campos."
-        resultado.style.color = "red";
-        return;
-    }
+  if (isNaN(precio) || isNaN(descuento1) || isNaN(descuento2)) {
+    resultado.textContent = "Por favor completá todos los campos.";
+    resultado.style.color = "red";
+    return;
+  }
 
-    const monto1 = precio * (descuento / 100);
-    const intermedio = precio - monto1;
+  const monto1 = precio * (descuento1 / 100);
+  const intermedio = precio - monto1;
 
-    const monto2 = intermedio * (descuento2 / 100);
-    const final = intermedio - monto2;
+  const monto2 = intermedio * (descuento2 / 100);
+  const final = intermedio - monto2;
 
-    resultado.style.color = "green";
-    resultado. innerHTML = `
-    Precio original: $${precio.toFixed(2)} <br>
-    1° descuento (${descuento1}%): - $${monto1.toFixed(2)}<br>
-    Subtotal: $${intermedio.toFixed(2)}<br>
-    2° descuento (${descuento2}): -$${monto2.toFixed(2)}<br>
-    <strong> total: $${final.toFixed(2)} </strong> `;
-    
+  resultado.style.color = "green";
+  resultado.innerHTML = `
+        Precio original: $${precio.toFixed(2)} <br>
+        1° descuento (${descuento1}%): - $${monto1.toFixed(2)}<br>
+        Subtotal: $${intermedio.toFixed(2)}<br>
+        2° descuento (${descuento2}%): - $${monto2.toFixed(2)}<br>
+        <strong>Total final: $${final.toFixed(2)}</strong>
+    `;
 }
+
+
