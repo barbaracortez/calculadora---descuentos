@@ -6,7 +6,7 @@ Incluye **modo oscuro**, validaciones y guarda el último cálculo en el navegad
 ---
 
 ## 🚀 Demo
-👉 [Ver aplicación en Vercel](#) *(pendiente de deploy)*  
+👉 https://calculadora-descuentos-o6bd.vercel.app/
 
 ---
 
