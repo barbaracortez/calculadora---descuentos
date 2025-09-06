@@ -1,55 +1,92 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0077cc, #00b4d8);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
 }
 
 .app {
-    max-width: 500px;
-    margin: 40px auto;
+    width: 100%;
+    max-width: 420px;
     padding: 30px;
-    background-color: #fdfdfd;
-    color: #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba (0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.app:hover {
+    transform: translateY(-5px);
+}
+
+.app h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #0077cc;
 }
 
 .app.oscuro {
-    background-color: #1e1e1e;
+    background-color: #121212;
     color: #f0f0f0;
 }
 
-input {
+label {
     display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: inherit;
+}
+
+input {
     width: 100%;
-    margin: 10px 0 20px;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border 0.2s ease;
+}
+
+input:focus {
+    border: 1px solid #0077cc;
+    outline: none;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     background-color: #0077cc;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin-right: 10px;
+    transition: background 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
     background-color: #005fa3;
+    transform: scale(1.05);
 }
 
 .resultado {
-    white-space:inherit;
+    white-space: pre-line;
     margin-top: 20px;
-    padding: 10px;
-    background-color: #e6ffe6;
-    border-left: 5px solid #92a196;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f0f9ff;
+    border-left: 6px solid #0077cc;
+    font-size: 15px;
 }
 
 .app.oscuro .resultado {
-    background-color: #2a2a2a;
-    border-left: 5px solid #90ee90;
+    background-color: #1f1f1f;
+    border-left: 6px solid #00ff99;
 }
